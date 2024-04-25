@@ -1,0 +1,4518 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://www.maplibre.org/maplibre-style-spec/changelog/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../deprecations/">
+      
+      
+      <link rel="icon" href="https://maplibre.org/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.19">
+    
+    
+      
+        <title>Changelog - MapLibre Style Spec</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="MapLibre Style Spec" class="md-header__button md-logo" aria-label="MapLibre Style Spec" data-md-component="logo">
+      
+  <img src="https://avatars.githubusercontent.com/u/75709127?s=48&v=4" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MapLibre Style Spec
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/maplibre/maplibre-style-spec" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="MapLibre Style Spec" class="md-nav__button md-logo" aria-label="MapLibre Style Spec" data-md-component="logo">
+      
+  <img src="https://avatars.githubusercontent.com/u/75709127?s=48&v=4" alt="logo">
+
+    </a>
+    MapLibre Style Spec
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/maplibre/maplibre-style-spec" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2011" class="md-nav__link">
+    <span class="md-ellipsis">
+      20.1.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20.1.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐞 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2010" class="md-nav__link">
+    <span class="md-ellipsis">
+      20.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2000" class="md-nav__link">
+    <span class="md-ellipsis">
+      20.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐞 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1933" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.3.3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.3.3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1932" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.3.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.3.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1931" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.3.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.3.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1930" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.3.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.3.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1922" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.2.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.2.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1921" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.2.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.2.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1920" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.2.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.2.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1910" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1901" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.0.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.0.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1900" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1800" class="md-nav__link">
+    <span class="md-ellipsis">
+      18.0.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1710" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.1.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1702" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.0.2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1701" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.0.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1700" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1610" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1600" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1510" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1500" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1402" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.0.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.0.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1401" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.0.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.0.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1400" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13170" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.17.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.17.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13160" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.16.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.16.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13150" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.15.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.15.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13140" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.14.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.14.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13131" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.13.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.13.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13130" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.13.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.13.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13120" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.12.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13110" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.11.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.11.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13102" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.10.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.10.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13100" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.10.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.10.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1391" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.9.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.9.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Improvement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1390" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.9.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1380" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.8.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1372" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.7.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.7.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1371" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.7.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.7.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1370" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.7.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.7.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1360" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.6.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.6.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1350" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.5.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.5.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1340" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.4.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.4.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1330" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.3.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.3.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1320" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.2.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.2.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1311" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.1.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.1.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1310" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1301" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.0.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.0.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1300" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.0.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1200" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1111" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.1.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1110" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1100" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1010" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validation-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1001" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.0.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1000" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.0.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#901" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.0.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#900" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.0.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8110" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.11.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8100" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.10.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.10.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#style-specification-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Style Specification Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-json-api-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference JSON &amp; API Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#890" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.9.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#881" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.8.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#880" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.8.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#870" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.7.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#860" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.6.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#842" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.4.2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#841" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.4.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#840" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.4.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#830" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#821" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#820" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#810" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#800" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.0.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#750" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#741" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#700" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.0.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#600-style-spec-v6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.0.0 (Style spec v6)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#005-in-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.0.5 (in progress)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#004-aug-8-2014" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.0.4 (Aug 8 2014)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deprecations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deprecations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../expressions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Expressions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glyphs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glyphs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Layers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../light/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Light
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../root/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Root
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sky/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sky
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sprite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sprite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terrain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terrain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transition/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2011" class="md-nav__link">
+    <span class="md-ellipsis">
+      20.1.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20.1.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐞 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2010" class="md-nav__link">
+    <span class="md-ellipsis">
+      20.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2000" class="md-nav__link">
+    <span class="md-ellipsis">
+      20.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐞 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1933" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.3.3
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.3.3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1932" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.3.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.3.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1931" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.3.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.3.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1930" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.3.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.3.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1922" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.2.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.2.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1921" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.2.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.2.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1920" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.2.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.2.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1910" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1901" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.0.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.0.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1900" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1800" class="md-nav__link">
+    <span class="md-ellipsis">
+      18.0.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1710" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.1.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1702" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.0.2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1701" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.0.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1700" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1610" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1600" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1510" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1500" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1402" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.0.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.0.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1401" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.0.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.0.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1400" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13170" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.17.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.17.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13160" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.16.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.16.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13150" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.15.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.15.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13140" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.14.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.14.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13131" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.13.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.13.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13130" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.13.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.13.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13120" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.12.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13110" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.11.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.11.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13102" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.10.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.10.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13100" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.10.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.10.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1391" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.9.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.9.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Improvement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1390" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.9.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1380" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.8.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1372" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.7.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.7.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1371" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.7.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.7.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1370" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.7.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.7.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1360" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.6.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.6.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1350" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.5.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.5.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1340" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.4.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.4.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1330" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.3.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.3.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1320" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.2.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.2.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1311" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.1.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.1.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1310" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1301" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.0.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13.0.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1300" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.0.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1200" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1111" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.1.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1110" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1100" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.0.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.0.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking-changes_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Breaking changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features-and-improvements_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✨ Features and improvements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bug-fixes_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐛 Bug fixes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1010" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.1.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validation-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1001" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.0.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1000" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.0.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#901" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.0.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#900" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.0.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8110" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.11.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8100" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.10.0
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.10.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#style-specification-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Style Specification Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-json-api-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reference JSON &amp; API Changes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#890" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.9.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#881" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.8.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#880" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.8.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#870" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.7.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#860" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.6.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#842" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.4.2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#841" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.4.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#840" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.4.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#830" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#821" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#820" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#810" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#800" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.0.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#750" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#741" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4.1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#700" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.0.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#600-style-spec-v6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.0.0 (Style spec v6)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#005-in-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.0.5 (in progress)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#004-aug-8-2014" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.0.4 (Aug 8 2014)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
+<h2 id="2011">20.1.1<a class="headerlink" href="#2011" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes">🐞 Bug fixes<a class="headerlink" href="#bug-fixes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add missing sky in diff results <a href="https://github.com/maplibre/maplibre-style-spec/pull/518">#518</a></li>
+</ul>
+<h2 id="2010">20.1.0<a class="headerlink" href="#2010" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements">✨ Features and improvements<a class="headerlink" href="#features-and-improvements" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add <code>latest.json</code> to dist folder to allow using the full version of the spec <a href="https://github.com/maplibre/maplibre-style-spec/pull/490">#490</a></li>
+</ul>
+<h2 id="2000">20.0.0<a class="headerlink" href="#2000" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_1">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add back <code>migrate</code>, <code>validate</code> and <code>format</code> to the exported methods of this package <a href="https://github.com/maplibre/maplibre-style-spec/pull/464">#464</a></li>
+<li>Add terrain to diff method and improve type. This also removes the <code>operations</code> from the API <a href="https://github.com/maplibre/maplibre-style-spec/pull/460">#460</a></li>
+<li>Improve the type of <code>data</code> in the <code>GeoJSONSourceSpecification</code> for TypeScript <a href="https://github.com/maplibre/maplibre-style-spec/pull/463">#463</a>.</li>
+<li>Add expression tests to this repo <a href="https://github.com/maplibre/maplibre-style-spec/pull/476">#476</a></li>
+<li>Add Sky spec, this is only the definition, no implementation at this point, only validation <a href="https://github.com/maplibre/maplibre-style-spec/pull/478">#478</a></li>
+</ul>
+<h3 id="bug-fixes_1">🐞 Bug fixes<a class="headerlink" href="#bug-fixes_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fix queryRenderedFeatures Within a FeatureCollection of polygons <a href="https://github.com/maplibre/maplibre-style-spec/pull/477">#477</a></li>
+</ul>
+<h2 id="1933">19.3.3<a class="headerlink" href="#1933" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_2">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Improve types for feature to include <code>unknown</code> <a href="https://github.com/maplibre/maplibre-style-spec/pull/365">#365</a></li>
+<li>Improve sprite documentation and supported versions <a href="https://github.com/maplibre/maplibre-style-spec/pull/390">#390</a></li>
+</ul>
+<h2 id="1932">19.3.2<a class="headerlink" href="#1932" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_3">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add raster dem source <code>redFactor</code>, <code>greenFactor</code>, <code>blueFactor</code>, <code>baseShift</code> properties <a href="https://github.com/maplibre/maplibre-style-spec/issues/326">#326</a></li>
+<li>Improve error messages around <code>hillshade</code> layers not using <code>raster-dem</code> sources <a href="https://github.com/maplibre/maplibre-style-spec/pull/353">#353</a></li>
+</ul>
+<h2 id="1931">19.3.1<a class="headerlink" href="#1931" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_4">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Document <code>raster-fade-duration</code> property's effect on rendering a video. <a href="https://github.com/maplibre/maplibre-style-spec/pull/297">#297</a></li>
+<li>Add and expose <code>isZoomExpression</code>. <a href="https://github.com/maplibre/maplibre-style-spec/issues/267">#267</a></li>
+</ul>
+<h2 id="1930">19.3.0<a class="headerlink" href="#1930" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_5">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add style property definition and validation for symbol layer <code>text-variable-anchor-offset</code> layout property. <a href="https://github.com/maplibre/maplibre-style-spec/issues/112">#112</a></li>
+</ul>
+<h2 id="1922">19.2.2<a class="headerlink" href="#1922" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_6">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Trim css color before parsing <a href="https://github.com/maplibre/maplibre-style-spec/pull/255">#255</a></li>
+</ul>
+<h2 id="1921">19.2.1<a class="headerlink" href="#1921" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_7">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Skip running color match regex for hex color or rgb, if not required <a href="https://github.com/maplibre/maplibre-style-spec/pull/186">#186</a></li>
+</ul>
+<h2 id="1920">19.2.0<a class="headerlink" href="#1920" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_8">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Remove mapbox reference from docs and test cases <a href="https://github.com/maplibre/maplibre-style-spec/issues/111">#111</a></li>
+<li>Custom CSS Color 4 compliant css color parser <a href="https://github.com/maplibre/maplibre-style-spec/issues/175">#175</a></li>
+</ul>
+<h2 id="1910">19.1.0<a class="headerlink" href="#1910" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_9">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use D50 white point instead of D65 in HCL/LAB color spaces <a href="https://github.com/maplibre/maplibre-style-spec/pull/146">#146</a></li>
+<li>Automated migration of not-CSS-Color-specification-compliant hsl color values <a href="https://github.com/maplibre/maplibre-style-spec/pull/135">#135</a></li>
+</ul>
+<h2 id="1901">19.0.1<a class="headerlink" href="#1901" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_2">🐛 Bug fixes<a class="headerlink" href="#bug-fixes_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Restore support for <code>Color</code> instances in <code>Color.parse</code> <a href="https://github.com/maplibre/maplibre-style-spec/pull/128">#128</a></li>
+</ul>
+<h2 id="1900">19.0.0<a class="headerlink" href="#1900" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_10">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add support for defining colors using CSS Color 4 syntax <a href="https://github.com/maplibre/maplibre-style-spec/pull/94">#94</a></li>
+</ul>
+<h3 id="bug-fixes_3">🐛 Bug fixes<a class="headerlink" href="#bug-fixes_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Fix color interpolation in HCL and LAB color spaces to use d50 white point instead of d65, in conformance with CSS spec <a href="https://github.com/maplibre/maplibre-style-spec/pull/146">#146</a></p>
+</li>
+<li>
+<p>Fix incorrect color interpolation in HCL and LAB color spaces when interpolation results are outside the sRGB gamut. <a href="https://github.com/maplibre/maplibre-style-spec/pull/94">#94</a></p>
+</li>
+</ul>
+<h3 id="breaking-changes">Breaking changes<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h3>
+<p>Interpretation of interpolation of colors with alpha channel equal to 0 has changed. When interpolating colors with alpha channel equal to 0, the values of the other color channels in the specified color space are included in the calculation. Previously they were ignored and only the alpha value of the other, not fully transparent, color was interpolated. <a href="https://github.com/maplibre/maplibre-style-spec/pull/94">#94</a></p>
+<h2 id="1800">18.0.0<a class="headerlink" href="#1800" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The maplibre style specification and utilities now has it's own repository. The major bump is mainly a precautionary measure, in case the restructuring causes friction.</li>
+</ul>
+<h2 id="1710">17.1.0<a class="headerlink" href="#1710" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Add support for multiple sprites in one style <a href="https://github.com/maplibre/maplibre-style-spec/pull/1805">#1805</a></li>
+</ul>
+<h2 id="1702">17.0.2<a class="headerlink" href="#1702" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fix errors when running style-spec bin scripts and added missing help. Removed unnecessary script 'gl-style-composite'. <a href="https://github.com/maplibre/maplibre-gl-js/pull/1971">#1971</a></li>
+</ul>
+<h2 id="1701">17.0.1<a class="headerlink" href="#1701" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Generated typings file as not created in the build process and was added in this version <a href="https://github.com/maplibre/maplibre-gl-js/pull/1470">#1470</a></li>
+</ul>
+<h2 id="1700">17.0.0<a class="headerlink" href="#1700" title="Permanent link">&para;</a></h2>
+<h3 id="breaking-changes_1">Breaking changes<a class="headerlink" href="#breaking-changes_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Renamed <code>ParsingError</code> to <code>ExpressionParsingError</code> as there were two with the same name and added typescript typings <a href="https://github.com/maplibre/maplibre-gl-js/pull/1468">#1468</a></li>
+</ul>
+<h2 id="1610">16.1.0<a class="headerlink" href="#1610" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_11">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Update <code>icon-padding</code> symbol layout property to support asymmetric padding <a href="https://github.com/maplibre/maplibre-gl-js/pull/1289">#1289</a></li>
+</ul>
+<h2 id="1600">16.0.0<a class="headerlink" href="#1600" title="Permanent link">&para;</a></h2>
+<h3 id="breaking-changes_2">Breaking changes<a class="headerlink" href="#breaking-changes_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>index.js has been renamed to index.cjs to fix the 'is treated as an ES module file' error in node 12+ <a href="https://github.com/maplibre/maplibre-gl-js/pull/1223">#1223</a></li>
+</ul>
+<h2 id="1510">15.1.0<a class="headerlink" href="#1510" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_12">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add <code>icon-overlap</code> and <code>text-overlap</code> symbol layout properties <a href="https://github.com/maplibre/maplibre-gl-js/pull/347">#347</a></li>
+<li>Deprecate <code>icon-allow-overlap</code> and <code>text-allow-overlap</code> symbol layout properties. <code>icon-overlap</code> and <code>text-overlap</code> are their replacements.</li>
+</ul>
+<h2 id="1500">15.0.0<a class="headerlink" href="#1500" title="Permanent link">&para;</a></h2>
+<h3 id="breaking-changes_3">Breaking changes<a class="headerlink" href="#breaking-changes_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The migration to TypeScript <a href="https://github.com/maplibre/maplibre-gl-js/pull/209">#209</a> removed support for the <code>mapbox://</code> protocol.</li>
+</ul>
+<h2 id="1402">14.0.2<a class="headerlink" href="#1402" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_13">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fix node entry points <a href="https://github.com/maplibre/maplibre-gl-js/issues/400">#400</a></li>
+</ul>
+<h2 id="1401">14.0.1<a class="headerlink" href="#1401" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_14">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Migrate MapLibre GL JS and the style specification to TypeScript <a href="https://github.com/maplibre/maplibre-gl-js/pull/209">#209</a></li>
+</ul>
+<h2 id="1400">14.0.0<a class="headerlink" href="#1400" title="Permanent link">&para;</a></h2>
+<h3 id="breaking-changes_4">Breaking changes<a class="headerlink" href="#breaking-changes_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Remove the <code>--mapbox-api-supported</code> option of the <code>gl-style-validate</code> utility.</li>
+</ul>
+<h2 id="13170">13.17.0<a class="headerlink" href="#13170" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_15">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add a <code>filter</code> option for GeoJSON sources to filter out features prior to processing (e.g. before clustering). <a href="https://github.com/mapbox/mapbox-gl-js/pull/9864">#9864</a></li>
+</ul>
+<h2 id="13160">13.16.0<a class="headerlink" href="#13160" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_16">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Added <code>volatile</code> source property to control storing the tiles in local storage. (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9702">#9702</a>)</p>
+</li>
+<li>
+<p>Added <code>clusterMinPoints</code> option for clustered GeoJSON sources that defines the minimum number of points to form a cluster. (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9748">#9748</a>)</p>
+</li>
+</ul>
+<h2 id="13150">13.15.0<a class="headerlink" href="#13150" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_17">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add <code>distance</code> expression to <code>style-spec</code>. This expression returns the shortest distance between a feature and an input geometry (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9655">#9655</a>)</li>
+</ul>
+<h2 id="13140">13.14.0<a class="headerlink" href="#13140" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_18">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add <code>index-of</code> and <code>slice</code> expressions to search arrays and strings for the first occurrence of a specified value and return a section of the original array or string (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9450">#9450</a>) (h/t <a href="https://github.com/lbutler">lbutler</a>)</li>
+</ul>
+<h2 id="13131">13.13.1<a class="headerlink" href="#13131" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_19">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_19" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Expose <code>expression.isExpressionFilter(..)</code> from the bundle. (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9530">#9530</a>)</li>
+</ul>
+<h3 id="bug-fixes_4">🐛 Bug fixes<a class="headerlink" href="#bug-fixes_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fix a broken module import where the <code>style-spec</code> package was importing files from <code>mapbox-gl-js</code>, it's parent repo, causing downstream build systems to break. (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9522">#9522</a>)</li>
+</ul>
+<h2 id="13130">13.13.0<a class="headerlink" href="#13130" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_20">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_20" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add <code>within</code> expression for testing whether an evaluated feature lies within a given GeoJSON object (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9352">#9352</a>). For example:<br>
+<code>"icon-opacity": ["case", ["==", ["within", "some-polygon"], true], 1,
+["==", ["within", "some-polygon"], false], 0]</code></li>
+<li>Improve scaling of patterns used in <code>line-pattern</code> on all device resolutions and pixel ratios (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9266">#9266</a>)</li>
+</ul>
+<h3 id="bug-fixes_5">🐛 Bug fixes<a class="headerlink" href="#bug-fixes_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Allow needle argument to <code>in</code> expression to be false (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9295">#9295</a>)</li>
+<li>Fix a bug where <code>icon-image</code> expression that evaluates to an empty string (<code>''</code>) produced a warning (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9380">#9380</a>)</li>
+<li>Prevent exception resulting from <code>line-dash-array</code> of empty length (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9385">#9385</a>)</li>
+</ul>
+<h2 id="13120">13.12.0<a class="headerlink" href="#13120" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Update <code>image</code> expression SDK support table (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9228">#9228</a>)</li>
+<li>Fix <code>promoteId</code> for line layers (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9210">#9210</a>, <a href="https://github.com/mapbox/mapbox-gl-js/pull/9212">#9212</a>)</li>
+</ul>
+<h2 id="13110">13.11.0<a class="headerlink" href="#13110" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_21">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add <code>promoteId</code> option to use a feature property as ID for feature state (<a href="https://github.com/mapbox/mapbox-gl-js/pull/8987">#8987</a>)</li>
+<li>Update <code>symbol-avoid-edges</code> documentation regarding global collision detection (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9157">#9157</a>)</li>
+<li>Remove reference to <code>in</code> function which has been replaced by the <code>in</code> expression (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9102">#9102</a>)</li>
+</ul>
+<h3 id="bug-fixes_6">🐛 Bug fixes<a class="headerlink" href="#bug-fixes_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fix bug where <code>symbol-sort-key</code> was not used for collisions that crossed tile boundaries (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9054">#9054</a>)</li>
+</ul>
+<h2 id="13102">13.10.2<a class="headerlink" href="#13102" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_7">🐛 Bug fixes<a class="headerlink" href="#bug-fixes_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fix style validation error messages not being displayed (<a href="https://github.com/mapbox/mapbox-gl-js/pull/9073">#9073</a>)</li>
+</ul>
+<h2 id="13100">13.10.0<a class="headerlink" href="#13100" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_22">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add ability to insert images into text labels using an <code>image</code> expression within a <code>format</code> expression: <code>"text-field": ["format", "Some text", ["image", "my-image"], "some more text"]</code> (<a href="https://github.com/mapbox/mapbox-gl-js/pull/8904">#8904</a>)</li>
+<li>Add <code>in</code> expression. It can check if a value is in an array (<code>["in", value, array]</code>) or a substring is in a string (<code>["in", substring, string]</code>) (<a href="https://github.com/mapbox/mapbox-gl-js/pull/8876">#8876</a>)</li>
+<li>Add support for stretchable images (aka nine-part or nine-patch images). Stretchable images can be used with <code>icon-text-fit</code> to draw resized images with unstretched corners and borders. (<a href="https://github.com/mapbox/mapbox-gl-js/pull/8997">#8997</a>)</li>
+<li>Add an es modules build of for mapbox-gl-style-spec in dist/ (<a href="https://github.com/mapbox/mapbox-gl-js/pull/8247">#8247</a>) (h/t <a href="https://github.com/ahocevar">ahocevar</a>)</li>
+</ul>
+<h2 id="1391">13.9.1<a class="headerlink" href="#1391" title="Permanent link">&para;</a></h2>
+<h3 id="improvement">✨ Improvement<a class="headerlink" href="#improvement" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Rename <code>Image</code> type to <code>ResolvedImage</code>, to better represent the result of an <code>image</code> expression evaluation. (<a href="https://github.com/mapbox/mapbox-gl-js/pull/8901">#8901</a>)</li>
+</ul>
+<h2 id="1390">13.9.0<a class="headerlink" href="#1390" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Add <code>image</code> expression operator to determine image availability (<a href="https://github.com/mapbox/mapbox-gl-js/pull/8684">#8684</a>)</li>
+<li>Add a style-spec function to validate that styles are compatible with the Mapbox API (<a href="https://github.com/mapbox/mapbox-gl-js/pull/8663">#8663</a>)</li>
+</ul>
+<h2 id="1380">13.8.0<a class="headerlink" href="#1380" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Introduce <code>text-writing-mode</code> symbol layer property to allow placing point labels vertically. <a href="https://github.com/mapbox/mapbox-gl-js/pull/8399">#8399</a></li>
+<li>Allow <code>text-color</code> to be used in formatted expressions to be able to draw different parts of a label in different colors. <a href="https://github.com/mapbox/mapbox-gl-js/pull/8068">#8068</a></li>
+<li>Improve conversion of legacy filters with duplicate values. <a href="https://github.com/mapbox/mapbox-gl-js/pull/8542">#8542</a></li>
+</ul>
+<h2 id="1372">13.7.2<a class="headerlink" href="#1372" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_8">🐛 Bug fixes<a class="headerlink" href="#bug-fixes_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fix SDK support spec section for variable label placement (<a href="https://github.com/mapbox/mapbox-gl-js/pull/8384">#8384</a>) (h/t <a href="https://github.com/pozdnyakov">@pozdnyakov</a>)</li>
+</ul>
+<h3 id="features-and-improvements_23">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_23" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add SDK support spec section for text-radial-offset  (<a href="https://github.com/mapbox/mapbox-gl-js/pull/8401">#8401</a>)</li>
+<li>Add <code>*-sort-key</code> layout property for circle, fill, line (<a href="https://github.com/mapbox/mapbox-gl-js/pull/8467">#8467</a>)</li>
+<li>Expose convertFilter API in the style specification (<a href="https://github.com/mapbox/mapbox-gl-js/pull/8493">#8493</a>)</li>
+</ul>
+<h2 id="1371">13.7.1<a class="headerlink" href="#1371" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_9">🐛 Bug fixes<a class="headerlink" href="#bug-fixes_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fix format expression options validation (<a href="https://github.com/mapbox/mapbox-gl-js/pull/8339">#8339</a>)</li>
+<li>Fix SDK support information for style properties added in v13.7.0: (<a href="https://github.com/mapbox/mapbox-gl-js/pull/8384">#8384</a>)<ul>
+<li>Add missing SDK support section for <code>text-radial-offset</code> property</li>
+<li>Assign SDK versions for <code>text-variable-anchor</code> and <code>text-justify: auto</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="1370">13.7.0<a class="headerlink" href="#1370" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_24">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_24" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add <code>text-radial-offset</code> style property (<a href="https://github.com/mapbox/mapbox-gl-js/pull/7596">#7596</a>)</li>
+<li>Add <code>text-variable-anchor</code> style property (<a href="https://github.com/mapbox/mapbox-gl-js/pull/7596">#7596</a>)</li>
+<li>Add <code>auto</code> value to <code>text-justify</code> style property (<a href="https://github.com/mapbox/mapbox-gl-js/pull/7596">#7596</a>)</li>
+</ul>
+<h2 id="1360">13.6.0<a class="headerlink" href="#1360" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_25">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_25" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add <code>clusterProperties</code> option for aggregated cluster properties (<a href="https://github.com/mapbox/mapbox-gl-js/issues/2412">#2412</a>, fixed by <a href="https://github.com/mapbox/mapbox-gl-js/pull/7584">#7584</a>)</li>
+<li>Add <code>number-format</code> expression (<a href="https://github.com/mapbox/mapbox-gl-js/pull/7626">#7626</a>)</li>
+<li>Add <code>symbol-sort-key</code> style property (<a href="https://github.com/mapbox/mapbox-gl-js/pull/7678">#7678</a>)</li>
+</ul>
+<h2 id="1350">13.5.0<a class="headerlink" href="#1350" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_26">Features and improvements<a class="headerlink" href="#features-and-improvements_26" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Flattens <code>all</code> expressions in converted filters (<a href="https://github.com/mapbox/mapbox-gl-js/pull/7679">#7679</a>)</li>
+<li>Compatibility tables are updated (<a href="https://github.com/mapbox/mapbox-gl-js/pull/7574">#7574</a>)</li>
+</ul>
+<h2 id="1340">13.4.0<a class="headerlink" href="#1340" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_27">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_27" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tighten style validation</strong><ul>
+<li>Disallow expressions as stop values (<a href="https://github.com/mapbox/mapbox-gl-js/pull/7396">#7396</a>)</li>
+<li>Disallow <code>feature-state</code> expressions in filters (<a href="https://github.com/mapbox/mapbox-gl-js/pull/7366">#7366</a>)</li>
+</ul>
+</li>
+</ul>
+<h2 id="1330">13.3.0<a class="headerlink" href="#1330" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_10">🐛 Bug fixes<a class="headerlink" href="#bug-fixes_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Expressions</strong><ul>
+<li>Fix <code>let</code> expression stripping expected type during parsing (<a href="https://github.com/mapbox/mapbox-gl-js/issues/7300">#7300</a>, fixed by <a href="https://github.com/mapbox/mapbox-gl-js/pull/7301">#7301</a>)</li>
+<li>Fix superfluous wrapping of literals in <code>literal</code> expression (<a href="https://github.com/mapbox/mapbox-gl-js/issues/7336">#7336</a>, fixed by <a href="https://github.com/mapbox/mapbox-gl-js/pull/7337">#7337</a>)</li>
+<li>Allow calling <code>to-color</code> on values that are already of type <code>Color</code> (<a href="https://github.com/mapbox/mapbox-gl-js/pull/7260">#7260</a>)</li>
+<li>Fix <code>to-array</code> for empty arrays ((<a href="https://github.com/mapbox/mapbox-gl-js/pull/7261">#7261</a>))</li>
+<li>Fix identity functions for <code>text-field</code> when using formatted text (<a href="https://github.com/mapbox/mapbox-gl-js/pull/7351">#7351</a>)</li>
+<li>Fix coercion of <code>null</code> to <code>0</code> in <code>to-number</code> expression (<a href="https://github.com/mapbox/mapbox-gl-js/issues/7083">#7083</a>, fixed by <a href="https://github.com/mapbox/mapbox-gl-js/pull/7274">#7274</a>)</li>
+</ul>
+</li>
+</ul>
+<h3 id="features-and-improvements_28">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_28" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add <code>fill-extrusion-vertical-gradient</code> property for controlling shading of fill extrusions (<a href="https://github.com/mapbox/mapbox-gl-js/issues/5768">#5768</a>, fixed by <a href="https://github.com/mapbox/mapbox-gl-js/pull/6841">#6841</a>)</li>
+</ul>
+<h2 id="1320">13.2.0<a class="headerlink" href="#1320" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_11">🐛 Bug fixes<a class="headerlink" href="#bug-fixes_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Update the style-spec's old <code>gl-style-migrate</code> script to include conversion of legacy functions and filters to their expression equivalents (<a href="https://github.com/mapbox/mapbox-gl-js/issues/6927">#6927</a>, fixed by <a href="https://github.com/mapbox/mapbox-gl-js/pull/7095">#7095</a>)</li>
+</ul>
+<h3 id="features-and-improvements_29">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_29" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add <code>symbol-z-order</code> symbol layout property to style spec (<a href="https://github.com/mapbox/mapbox-gl-js/pull/7219">#7219</a>)</li>
+<li>Implement data-driven styling support for <code>*-pattern properties</code> (<a href="https://github.com/mapbox/mapbox-gl-js/pull/6289">#6289</a>)</li>
+</ul>
+<h2 id="1311">13.1.1<a class="headerlink" href="#1311" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_12">🐛 Bug fixes<a class="headerlink" href="#bug-fixes_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fix broken module import in mapboxgl-style-spec (v13.0.1) (<a href="https://github.com/mapbox/mapbox-gl-js/issues/6984">#6984</a>, fixed by <a href="https://api.github.com/repos/mapbox/mapbox-gl-js/pulls/6997">#6997</a>)</li>
+</ul>
+<h3 id="features-and-improvements_30">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_30" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Improve formatting for style output (<a href="https://github.com/mapbox/mapbox-gl-js/pull/7029">#7029</a>)</li>
+</ul>
+<h2 id="1310">13.1.0<a class="headerlink" href="#1310" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_31">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_31" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add <code>raster-resampling</code> raster paint property (<a href="https://github.com/mapbox/mapbox-gl-js/pull/6411">#6411</a>) (h/t <a href="https://github.com/andrewharvey">andrewharvey</a>)</li>
+<li>Add <code>symbol-placement: line-center</code> (<a href="https://github.com/mapbox/mapbox-gl-js/pull/6821">#6821</a>)</li>
+</ul>
+<h2 id="1301">13.0.1<a class="headerlink" href="#1301" title="Permanent link">&para;</a></h2>
+<h3 id="breaking-changes_5">⚠️ Breaking changes<a class="headerlink" href="#breaking-changes_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Align implicit type behavior of <code>match</code> expressions with with <code>case/==</code> (<a href="https://github.com/mapbox/mapbox-gl-js/pull/6684">#6684</a>)</li>
+<li>Update spec so that documentation can automatically capture which functions and expressions can be used with which properties (<a href="https://github.com/mapbox/mapbox-gl-js/pull/6521">#6521</a>)</li>
+</ul>
+<h3 id="features-and-improvements_32">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_32" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add <code>feature-state</code> <a href="https://github.com/mapbox/mapbox-gl-js/pull/6263">#6263</a></li>
+<li>Add support for GeoJSON attribution (<a href="https://github.com/mapbox/mapbox-gl-js/pull/6364">#6364</a>) (h/t <a href="https://github.com/andrewharvey">andrewharvey</a>)</li>
+<li>Upgrade to Flow 0.69 (<a href="https://github.com/mapbox/mapbox-gl-js/pull/6594">#6594</a>)</li>
+</ul>
+<h3 id="bug-fixes_13">🐛 Bug fixes<a class="headerlink" href="#bug-fixes_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use named exports for style-spec entrypoint module (<a href="https://github.com/mapbox/mapbox-gl-js/issues/6601">#6601</a></li>
+</ul>
+<h2 id="1300">13.0.0<a class="headerlink" href="#1300" title="Permanent link">&para;</a></h2>
+<p>Malformed package published to NPM.</p>
+<h2 id="1200">12.0.0<a class="headerlink" href="#1200" title="Permanent link">&para;</a></h2>
+<h3 id="breaking-changes_6">⚠️ Breaking changes<a class="headerlink" href="#breaking-changes_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The <code>"to-string"</code> expression operator now converts null to an empty string rather than to <code>"null"</code>. <a href="https://github.com/mapbox/mapbox-gl-js/pull/6534">#6534</a></li>
+</ul>
+<h3 id="features-and-improvements_33">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_33" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🌈 Add line-gradient property <a href="https://github.com/mapbox/mapbox-gl-js/pull/6303">#6303</a></li>
+<li>Add collator expression for controlling case and diacritic sensitivity in string comparisons <a href="https://github.com/mapbox/mapbox-gl-js/pull/6270">#6270</a></li>
+<li>Add <code>is-supported-script</code> expression for determining if a script is supported. <a href="https://github.com/mapbox/mapbox-gl-js/pull/6260">#6260</a></li>
+<li>Add <code>collator</code> expression for controlling case and diacritic sensitivity in string comparisons <a href="https://github.com/mapbox/mapbox-gl-js/pull/6270">#6270</a></li>
+<li>Add <code>abs</code>, <code>round</code>, <code>floor</code>, and <code>ceil</code> expression operators <a href="https://github.com/mapbox/mapbox-gl-js/pull/6496">#6496</a></li>
+<li>Add support for Mapzen Terrarium tiles in raster-dem sources <a href="https://github.com/mapbox/mapbox-gl-js/pull/6110">#6110</a></li>
+</ul>
+<h3 id="bug-fixes_14">🐛 Bug fixes<a class="headerlink" href="#bug-fixes_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fix Rollup build <a href="https://github.com/mapbox/mapbox-gl-js/pull/6575">6575</a></li>
+</ul>
+<h2 id="1111">11.1.1<a class="headerlink" href="#1111" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes_15">🐛 Bug fixes<a class="headerlink" href="#bug-fixes_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Update SDK support information for <code>text-font</code>, and <code>heatmap-color</code>, and <code>hillshade</code> layer properties.</li>
+</ul>
+<h2 id="1110">11.1.0<a class="headerlink" href="#1110" title="Permanent link">&para;</a></h2>
+<h3 id="features-and-improvements_34">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_34" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Avoid use of <code>new Function</code> for filters by converting old-style filters to expressions <a href="https://github.com/mapbox/mapbox-gl-js/pull/5665">#5665</a>.</li>
+</ul>
+<h2 id="1100">11.0.0<a class="headerlink" href="#1100" title="Permanent link">&para;</a></h2>
+<h3 id="breaking-changes_7">⚠️ Breaking changes<a class="headerlink" href="#breaking-changes_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Remove constants validating code <a href="https://github.com/mapbox/mapbox-gl-js/pull/5885">#5885</a></li>
+<li><code>"colorSpace": "hcl"</code> now uses shortest-path interpolation for hue <a href="https://github.com/mapbox/mapbox-gl-js/issues/5811">#5811</a></li>
+</ul>
+<h3 id="features-and-improvements_35">✨ Features and improvements<a class="headerlink" href="#features-and-improvements_35" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Introduce client-side hillshading with <code>raster-dem</code> source type and <code>hillshade</code> layer type <a href="https://github.com/mapbox/mapbox-gl-js/pull/5286">#5286</a></li>
+<li>Add Color#toString and expose Color publicly <a href="https://github.com/mapbox/mapbox-gl-js/pull/5866">#5866</a></li>
+<li>Improve typing for <code>==</code> and <code>!=</code> expressions <a href="https://github.com/mapbox/mapbox-gl-js/pull/5840">#5840</a></li>
+<li>Made <code>coalesce</code> expressions more useful <a href="https://github.com/mapbox/mapbox-gl-js/issues/5755">#5755</a></li>
+<li>Enable implicit type assertions for array types <a href="https://github.com/mapbox/mapbox-gl-js/pull/5738">#5738</a></li>
+</ul>
+<h3 id="bug-fixes_16">🐛 Bug fixes<a class="headerlink" href="#bug-fixes_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fix standalone browser build <a href="https://github.com/mapbox/mapbox-gl-js/pull/5736">#5736</a>, <a href="https://github.com/mapbox/mapbox-gl-js/pull/5906">#5906</a></li>
+<li>Handle NaN as input to step and interpolate expressions <a href="https://github.com/mapbox/mapbox-gl-js/pull/5757">#5757</a></li>
+<li>Fix style diffing for changes to GeoJSON sources <a href="https://github.com/mapbox/mapbox-gl-js/pull/5745">#5745</a></li>
+<li>Mark layer "type" property as required <a href="https://github.com/mapbox/mapbox-gl-js/pull/5849">#5849</a></li>
+</ul>
+<h2 id="1010">10.1.0<a class="headerlink" href="#1010" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Remove support for validating and migrating v6 styles <a href="https://github.com/mapbox/mapbox-gl-js/pull/5604">#5604</a></li>
+<li>Remove support for validating v7 styles <a href="https://github.com/mapbox/mapbox-gl-js/pull/5604">#5604</a></li>
+<li>Remove spaces after commas in <code>to-string</code> representation of colors <a href="https://github.com/mapbox/mapbox-gl-js/pull/5480">#5480</a></li>
+<li>Fix bugs preventing <code>mapbox-gl-style-spec</code> package on NPM from being used externally <a href="https://github.com/mapbox/mapbox-gl-js/pull/5502">#5502</a></li>
+<li>Fix flow-typed interface generator <a href="https://github.com/mapbox/mapbox-gl-js/pull/5478">#5478</a></li>
+<li>Export <code>function</code> <a href="https://github.com/mapbox/mapbox-gl-js/pull/5584">#5584</a></li>
+<li>Export <code>StylePropertySpecification</code> type <a href="https://github.com/mapbox/mapbox-gl-js/pull/5593">#5593</a></li>
+<li>Split the <code>source_tile</code> entry in the JSON schema into <code>source_vector</code> and <code>source_raster</code> <a href="https://github.com/mapbox/mapbox-gl-js/pull/5604">#5604</a></li>
+</ul>
+<h3 id="validation-changes">Validation Changes<a class="headerlink" href="#validation-changes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Require that <code>heatmap-color</code> use expressions instead of stop functions <a href="https://github.com/mapbox/mapbox-gl-js/issues/5624">#5624</a></li>
+<li>Remove support for including <code>{tokens}</code> in expressions for <code>text-field</code> and <code>icon-image</code> <a href="https://github.com/mapbox/mapbox-gl-js/issues/5599">#5599</a></li>
+<li>Disallow interpolation in expressions for <code>line-dasharray</code> <a href="https://github.com/mapbox/mapbox-gl-js/pull/5519">#5519</a></li>
+<li>Validate that zoom expressions only appear at the top level of an expression <a href="https://github.com/mapbox/mapbox-gl-js/issues/5609">#5609</a></li>
+<li>Validate that <code>step</code> and <code>interpolate</code> expressions don't have any duplicate stops <a href="https://github.com/mapbox/mapbox-gl-js/issues/5605">#5605</a></li>
+<li>Split <code>curve</code> expression into <code>step</code> and <code>interpolate</code> expressions <a href="https://github.com/mapbox/mapbox-gl-js/pull/5542">#5542</a></li>
+<li>Validate expression values for enum-typed properties <a href="https://github.com/mapbox/mapbox-gl-js/pull/5589">#5589</a></li>
+<li>Improve validation to catch uses of deprecated function syntax <a href="https://github.com/mapbox/mapbox-gl-js/pull/5667">#5667</a></li>
+</ul>
+<h2 id="1001">10.0.1<a class="headerlink" href="#1001" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fix bug preventing @mapbox/mapbox-gl-style-spec package from being usable outside of mapbox-gl-js (#5502)</li>
+</ul>
+<h2 id="1000">10.0.0<a class="headerlink" href="#1000" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Add expression and heatmap layer support. See Mapbox GL JS v0.40.1 changelog entry for details.</li>
+</ul>
+<h2 id="901">9.0.1<a class="headerlink" href="#901" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Remove <code>fast-stable-stringify</code> dependency (#5152)</li>
+</ul>
+<h2 id="900">9.0.0<a class="headerlink" href="#900" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fix validation error on categorical zoom-and-property functions (#4220)</li>
+<li>Relax requirement that styles using "icon-image" must have a "sprite"</li>
+<li>Prevent infinite loop in binarySearchForIndex when duplicate stops are present. (#4503)</li>
+<li>Ensure generated composite function stops are in the correct order (#4509)</li>
+<li>Update SDK support matrices to be current as of GL JS v0.35.1, iOS SDK v3.5.0, Android SDK 5.0.0</li>
+<li>Remove support for implicitly-categorical functions</li>
+<li>BREAKING CHANGE: the API for the <code>function</code> module has changed. The <code>interpolated</code> and <code>piecewise-constant</code> exports
+were replaced with a single unnamed export, a function which accepts an object conforming to the style spec "function"
+definition, and an object defining a style spec property. It handles color parsing and validation of feature values
+internally.</li>
+<li>Functions now support a "default" property.</li>
+<li><code>parseColor</code> was promoted from gl-js.</li>
+</ul>
+<h2 id="8110">8.11.0<a class="headerlink" href="#8110" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Merge <code>feature-filter</code> repository into this repository #639</li>
+</ul>
+<h2 id="8100">8.10.0<a class="headerlink" href="#8100" title="Permanent link">&para;</a></h2>
+<p>v8.0.0 styles are fully compatible with v8.10.0.</p>
+<h3 id="style-specification-changes">Style Specification Changes<a class="headerlink" href="#style-specification-changes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Added <code>colorSpace</code> option to functions</li>
+<li>Added <code>fill-extrusion</code> layer type</li>
+<li>Add top-level <code>light</code> property</li>
+<li>Remove increase maximum <code>maxzoom</code> to 24</li>
+<li>Deprecate paint classes :warning:</li>
+<li>Increase strictness of function validation</li>
+</ul>
+<h3 id="reference-json-api-changes">Reference JSON &amp; API Changes<a class="headerlink" href="#reference-json-api-changes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Added <code>deref</code> utility</li>
+<li>Added <code>group_by_layout</code> utility</li>
+<li>Merge <code>mapbox-gl-function</code> repository into this repository</li>
+</ul>
+<h2 id="890">8.9.0<a class="headerlink" href="#890" title="Permanent link">&para;</a></h2>
+<p>v8.0.0 styles are fully compatible with v8.9.0.</p>
+<ul>
+<li>Added identity functions</li>
+<li>Added <code>auto</code> value which represents the calculated default value</li>
+</ul>
+<h2 id="881">8.8.1<a class="headerlink" href="#881" title="Permanent link">&para;</a></h2>
+<p>v8.0.0 styles are fully compatible with v8.8.1.</p>
+<ul>
+<li>Fixed style validation for layers with invalid types</li>
+</ul>
+<h2 id="880">8.8.0<a class="headerlink" href="#880" title="Permanent link">&para;</a></h2>
+<p>v8.0.0 styles are fully compatible with v8.8.0.</p>
+<ul>
+<li>Clarified documentation around fill-opacity.</li>
+<li>Update function documentation and validation for property functions.</li>
+<li>Add text-pitch-alignment property.</li>
+<li>Add icon-text-fit, icon-text-fit-padding properties.</li>
+</ul>
+<h2 id="870">8.7.0<a class="headerlink" href="#870" title="Permanent link">&para;</a></h2>
+<p>v8.0.0 styles are fully compatible with v8.7.0.</p>
+<ul>
+<li>Add support for has / !has operators.</li>
+</ul>
+<h2 id="860">8.6.0<a class="headerlink" href="#860" title="Permanent link">&para;</a></h2>
+<p>v8.0.0 styles are fully compatible with v8.6.0.</p>
+<ul>
+<li>Added support for zoom and feature driven functions.</li>
+</ul>
+<h2 id="842">8.4.2<a class="headerlink" href="#842" title="Permanent link">&para;</a></h2>
+<p>v8.0.0 styles are fully compatible with v8.4.2.</p>
+<ul>
+<li>Refactored style validator to expose more granular validation methods</li>
+</ul>
+<h2 id="841">8.4.1<a class="headerlink" href="#841" title="Permanent link">&para;</a></h2>
+<p>v8.0.0 styles are fully compatible with v8.4.1.</p>
+<ul>
+<li>Revert ramp validation checks that broke some styles.</li>
+</ul>
+<h2 id="840">8.4.0<a class="headerlink" href="#840" title="Permanent link">&para;</a></h2>
+<p>v8.0.0 styles are fully compatible with v8.4.0.</p>
+<ul>
+<li>Added <code>cluster</code>, <code>clusterRadius</code>, <code>clusterMaxZoom</code> GeoJSON source properties.</li>
+</ul>
+<h2 id="830">8.3.0<a class="headerlink" href="#830" title="Permanent link">&para;</a></h2>
+<p>v8.0.0 styles are fully compatible with v8.3.0.</p>
+<ul>
+<li>Added <code>line-offset</code> style property</li>
+</ul>
+<h2 id="821">8.2.1<a class="headerlink" href="#821" title="Permanent link">&para;</a></h2>
+<p>v8.0.0 styles are fully compatible with v8.2.1.</p>
+<ul>
+<li>Enforce that all layers that use a vector source specify a "source-layer"</li>
+</ul>
+<h2 id="820">8.2.0<a class="headerlink" href="#820" title="Permanent link">&para;</a></h2>
+<p>v8.0.0 styles are fully compatible with v8.2.0.</p>
+<ul>
+<li>Add inline <code>example</code> property.</li>
+<li>Enforce that all style properties must have documentation in <code>doc</code> property.</li>
+<li>Create minified style specs with <code>doc</code> and <code>example</code> properties removed.</li>
+<li><code>validate</code> now validates against minified style spec.</li>
+<li><code>format</code> now accepts <code>space</code> option to use with <code>JSON.stringify</code>.</li>
+<li>Remove <code>gl-style-spritify</code>. Mapbox GL sprites are now created automatically by
+  the Mapbox style APIs, or for hand-crafted styles, by <a href="https://github.com/mapbox/spritezero-cli">spritezero-cli</a>.</li>
+</ul>
+<h2 id="810">8.1.0<a class="headerlink" href="#810" title="Permanent link">&para;</a></h2>
+<p>v8.0.0 styles are fully compatible with v8.1.0.</p>
+<ul>
+<li>[BREAKING] Simplified layout/paint layer property types to more closely align
+  with v7 types.</li>
+<li>Fixed migration script compatibility with newer versions of Node.js and io.js</li>
+<li>Removed <code>constants</code> from schema, they were deprecated in v8</li>
+<li>Added style diff utility to generate semantic deltas between two stylesheets</li>
+<li>Added <code>visibility</code> property to <code>circle</code> layer type</li>
+<li>Added <code>pitch</code> property to stylesheet</li>
+</ul>
+<h2 id="800">8.0.0<a class="headerlink" href="#800" title="Permanent link">&para;</a></h2>
+<p>Introduction of Mapbox GL style specification v8. To migrate a v7 style to v8,
+use the <code>gl-style-migrate</code> script as described in the README.</p>
+<ul>
+<li>[BREAKING] The value of the <code>text-font</code> property is now an array of
+  strings, rather than a single comma separated string.</li>
+<li>[BREAKING] Renamed <code>symbol-min-distance</code> to <code>symbol-spacing</code>.</li>
+<li>[BREAKING] Renamed <code>background-image</code> to <code>background-pattern</code>.</li>
+<li>[BREAKING] Renamed <code>line-image</code> to <code>line-pattern</code>.</li>
+<li>[BREAKING] Renamed <code>fill-image</code> to <code>fill-pattern</code>.</li>
+<li>[BREAKING] Renamed the <code>url</code> property of the video source type to <code>urls</code>.</li>
+<li>[BREAKING] Coordinates in video sources are now specified in [lon, lat] order.</li>
+<li>[BREAKING] Removed <code>text-max-size</code> and <code>icon-max-size</code> properties; these
+  are now calculated automatically.</li>
+<li>[BREAKING] <code>text-size</code> and <code>icon-size</code> are now layout properties instead of paint properties.</li>
+<li>[BREAKING] Constants are no longer supported. If you are editing styles by
+  hand and want to use constants, you can use a preprocessing step with a tool
+  like <a href="https://github.com/screee/screess">ScreeSS</a>.</li>
+<li>[BREAKING] The format for <code>mapbox://</code> glyphs URLs has changed; you should
+  now use <code>mapbox://fonts/mapbox/{fontstack}/{range}.pbf</code>.</li>
+<li>[BREAKING] Reversed the priority of layers for calculating label placement:
+  labels for layers that appear later in the style now have priority over earlier
+  layers.</li>
+<li>Added a new <code>image</code> source type.</li>
+<li>Added a new <code>circle</code> layer type.</li>
+<li>Default map center location can now be set in the style.</li>
+<li>Added <code>mapbox://</code> sprite URLs <code>mapbox://sprite/{user | "mapbox"}/{id}</code></li>
+</ul>
+<h2 id="750">7.5.0<a class="headerlink" href="#750" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Added gl-style-composite script, for auto-compositing sources in a style.</li>
+</ul>
+<h2 id="741">7.4.1<a class="headerlink" href="#741" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Use JSON.stringify for formatting instead of js-beautify</li>
+</ul>
+<h2 id="700">7.0.0<a class="headerlink" href="#700" title="Permanent link">&para;</a></h2>
+<p>Introduction of Mapbox GL style specification v7.</p>
+<ul>
+<li>[BREAKING] Improve dashed lines (#234)</li>
+<li>[BREAKING] Remove prerendered layers (#232)</li>
+<li>Explicit visibility property (#212)</li>
+<li>Functions for all properties (#237)</li>
+</ul>
+<h2 id="600-style-spec-v6">6.0.0 (Style spec v6)<a class="headerlink" href="#600-style-spec-v6" title="Permanent link">&para;</a></h2>
+<p>Introduction of Mapbox GL style specification v6.</p>
+<ul>
+<li>[BREAKING] New filter syntax (#178)</li>
+<li>[BREAKING] Line gap property (#131)</li>
+<li>[BREAKING] Remove dashes from min/max-zoom (#175)</li>
+<li>[BREAKING] New layout/paint terminology (#166)</li>
+<li>[BREAKING] Single text positioning property (#197)</li>
+<li>Added requirements (#200)</li>
+<li>Added minimum, maximum, and period values (#198)</li>
+</ul>
+<h2 id="005-in-progress">0.0.5 (in progress)<a class="headerlink" href="#005-in-progress" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[BREAKING] Switch to suffix for transition properties (<code>transition-*</code> -&gt; <code>*-transition</code>).</li>
+<li>Added support for remote, non-Mapbox TileJSON sources.</li>
+<li>[BREAKING] Source <code>minZoom</code> and <code>maxZoom</code> renamed to <code>minzoom</code> and `maxzoom to match TileJSON.</li>
+<li>Added support for <code>mapbox://</code> glyph URLs.</li>
+<li>[BREAKING] Renamed <code>raster-fade</code> to <code>raster-fade-duration</code>.</li>
+<li>Added background-opacity property.</li>
+<li>Added "tokens" property to string values that can autocomplete fields from layers</li>
+<li>Added "units" property to describe value types</li>
+</ul>
+<h2 id="004-aug-8-2014">0.0.4 (Aug 8 2014)<a class="headerlink" href="#004-aug-8-2014" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Initial public release</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Maplibre
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/maplibre" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/maplibre" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://osmus.slack.com/archives/C01G3D28DAB" target="_blank" rel="noopener" title="osmus.slack.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      
+    
+  </body>
+</html>
